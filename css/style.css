@@ -320,6 +320,7 @@ h6,
 /*** Services ***/
 .service-card {
     background: #ffffff;
+    border: 1px solid hsl(243, 81%, 92%);
     overflow: hidden;
     border-radius: 0.75rem;
     transition: transform 0.3s ease;
@@ -343,6 +344,15 @@ h6,
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     z-index: 0;
+  }
+
+  @media (max-width: 768px) {
+    .service-bg {
+        opacity: 0.3;
+    }
+    .service-card .service-content {
+        color: #000;
+    }
   }
   
   .service-card:hover .service-bg {

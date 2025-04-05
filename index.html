@@ -141,33 +141,25 @@
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
                     <h4 class="section-title text-primary fw-bold">About Us</h4>
                     <h1 class="display-5 fw-semibold mb-4">Building Excellence in Electro-Mechanical Contracting Since 2004</h1>
+                    
+                    <div class="about-text">
+                        <p>POLY GULF E & C LLC, established in February 2004 in the Emirate of Dubai, UAE, is a leading name in electro-mechanical contracting across the Gulf region. Backed by a highly skilled and professionally trained workforce, we have consistently delivered projects on time, within budget, and with uncompromising quality — earning a reputation for reliability, technical precision, and client-focused delivery.</p>
+                        <p>Over the years, Polygulf has evolved into a trusted and socially responsible contractor, completing some of the most prestigious and technically demanding projects across the UAE and the GCC. Our portfolio includes high-profile ventures in commercial, residential, industrial, and infrastructure sectors.</p>
+                        
+                        <div class="more-text collapse" id="moreAboutText">
+                            <p>Leveraging Korean construction technology and combining it with world-class MEP (Mechanical, Electrical & Plumbing) expertise, we offer a unique synergy of advanced design, efficient execution, and specialized know-how — delivering the Best Available Technology for every project we undertake.</p>
+                            <p class="mb-4">With a decade of regional experience and a forward-looking vision, Polygulf continues to expand its footprint in the Gulf, ready to take on larger and more complex assignments — always driven by engineering excellence, integrity, and innovation.</p>
+                        </div>
 
-                    <!-- First 2 paragraphs (always visible) -->
-                    <p>POLY GULF E & C LLC, established in February 2004 in the Emirate of Dubai, UAE, is a leading name in electro-mechanical contracting across the Gulf region. Backed by a highly skilled and professionally trained workforce, we have consistently delivered projects on time, within budget, and with uncompromising quality — earning a reputation for reliability, technical precision, and client-focused delivery.</p>
-                    <p>Over the years, Polygulf has evolved into a trusted and socially responsible contractor, completing some of the most prestigious and technically demanding projects across the UAE and the GCC. Our portfolio includes high-profile ventures in commercial, residential, industrial, and infrastructure sectors.</p>
-
-                    <!-- Hidden paragraphs for small screens -->
-                    <div class="collapse d-md-none" id="moreAboutText">
-                        <p>Leveraging Korean construction technology and combining it with world-class MEP (Mechanical, Electrical & Plumbing) expertise, we offer a unique synergy of advanced design, efficient execution, and specialized know-how — delivering the Best Available Technology for every project we undertake.</p>
-                        <p class="mb-4">With a decade of regional experience and a forward-looking vision, Polygulf continues to expand its footprint in the Gulf, ready to take on larger and more complex assignments — always driven by engineering excellence, integrity, and innovation.</p>
+                        <button class="btn btn-primary px-4 py-2 rounded-pill mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#moreAboutText" aria-expanded="false" aria-controls="moreAboutText" id="readMoreBtn">
+                            Read More
+                        </button>
                     </div>
-
-                    <!-- Always visible on medium+ screens -->
-                    <div class="d-none d-md-block">
-                        <p>Leveraging Korean construction technology and combining it with world-class MEP (Mechanical, Electrical & Plumbing) expertise, we offer a unique synergy of advanced design, efficient execution, and specialized know-how — delivering the Best Available Technology for every project we undertake.</p>
-                        <p class="mb-4">With a decade of regional experience and a forward-looking vision, Polygulf continues to expand its footprint in the Gulf, ready to take on larger and more complex assignments — always driven by engineering excellence, integrity, and innovation.</p>
-                    </div>
-
-                    <!-- Button visible only on small screens -->
-                    <button class="btn btn-primary px-4 py-2 rounded-pill mt-2 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#moreAboutText" aria-expanded="false" aria-controls="moreAboutText" id="readMoreBtn">
-                        Read More
-                    </button>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
-
 
     <!-- Services Spotlight Start -->
     <section class="container-xxl py-5">
@@ -636,13 +628,13 @@
     <!-- Custom script -->
     <script>
         const btn = document.getElementById("readMoreBtn");
-        const collapse = document.getElementById("moreAboutText");
+        const collapseEl = document.getElementById("moreAboutText");
     
-        collapse.addEventListener('shown.bs.collapse', () => {
+        collapseEl.addEventListener("shown.bs.collapse", () => {
             btn.textContent = "Read Less";
         });
     
-        collapse.addEventListener('hidden.bs.collapse', () => {
+        collapseEl.addEventListener("hidden.bs.collapse", () => {
             btn.textContent = "Read More";
         });
     </script>
