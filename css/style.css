@@ -311,49 +311,62 @@ h6,
     border: 5px solid var(--primary);
     z-index: -1;
 }
+@media (max-width: 768px) {
+    #moreAboutText.collapse:not(.show) {
+        display: none;
+    }
+}
 
-
-/*** Service ***/
-.service-item .bg-img {
+/*** Services ***/
+.service-card {
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease;
+    min-height: 300px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-bg {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.service-item .service-text {
-    background: var(--light);
-    transition: .5s;
-}
-
-.service-item:hover .service-text {
-    background: rgba(0, 0, 0, .7);
-}
-
-.service-item * {
-    transition: .5;
-}
-
-.service-item:hover * {
-    color: #FFFFFF;
-}
-
-.service-item .btn {
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    color: var(--dark);
-    background: #FFFFFF;
-    white-space: nowrap;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.service-item:hover .btn {
-    width: 140px;
-}
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0;
+  }
+  
+  .service-card:hover .service-bg {
+    opacity: 0.3;
+  }
+  
+  .service-content {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+  }
+  
+  .service-card:hover .service-content {
+    color: #000;
+  }
+  
+  .service-content img {
+    transition: filter 0.3s;
+  }
+  
+  .service-card:hover .service-content img {
+    filter: grayscale(100%);
+  }
+  
 
 
 /*** Project ***/
